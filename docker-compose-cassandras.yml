@@ -1,0 +1,71 @@
+version: '3'
+services:
+  cassandra-seed-1:
+    image: cassandra:3.11.3
+    ports:
+    - "5001:9042"
+    environment:
+    - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+    - CASSANDRA_SEEDS=cassandra-seed-1,cassandra-seed-2,cassandra-seed-3,cassandra-seed-4
+    - CASSANDRA_PASSWORD=password123
+  cassandra-seed-2:
+    image: cassandra:3.11.3
+    ports:
+    - "5002:9042"
+    environment:
+    - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+    - CASSANDRA_SEEDS=cassandra-seed-1,cassandra-seed-2,cassandra-seed-3,cassandra-seed-4
+    - CASSANDRA_PASSWORD=password123
+  cassandra-seed-3:
+    image: cassandra:3.11.3
+    ports:
+    - "5003:9042"
+    environment:
+    - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+    - CASSANDRA_SEEDS=cassandra-seed-1,cassandra-seed-2,cassandra-seed-3,cassandra-seed-4
+    - CASSANDRA_PASSWORD=password123
+  cassandra-seed-4:
+    image: cassandra:3.11.3
+    ports:
+    - "5004:9042"
+    environment:
+    - CASSANDRA_CLUSTER_NAME=cassandra-cluster
+    - CASSANDRA_SEEDS=cassandra-seed-1,cassandra-seed-2,cassandra-seed-3,cassandra-seed-4
+    - CASSANDRA_PASSWORD=password123
+#  cassandra-masters:
+#    image: cassandra:latest
+#    environment:
+#    - MAX_HEAP_SIZE=128m
+#    - HEAP_NEWSIZE=32m
+#    - CASSANDRA_BROADCAST_ADDRESS=cassandra-masters
+#    deploy:
+#      mode: replicated
+#      replicas: 1
+#  cassandra-slaves:
+#    image: cassandra:latest
+#    environment:
+#    - MAX_HEAP_SIZE=128m
+#    - HEAP_NEWSIZE=32m
+#    - CASSANDRA_SEEDS=cassandra-masters
+#    - CASSANDRA_BROADCAST_ADDRESS=cassandra-slaves
+#    deploy:
+#      mode: replicated
+#      replicas: 1
+#    depends_on:
+#    - cassandra-masters
+#
+#
+#  cassandra-seed:
+#    image: cassandra:3.11.3
+#
+#  cassandra:
+#    image: cassandra:3.11.3
+#    links:
+#    - cassandra-seed
+#    environment:
+#      CASSANDRA_SEEDS: cassandra-seed
+#
+#  cassandra-dev:
+#    image: cassandra:3.11.3
+#    links:
+#    - cassandra

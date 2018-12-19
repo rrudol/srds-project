@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eu.rudol.study.srds.iml" filepath="$PROJECT_DIR$/.idea/modules/eu.rudol.study.srds.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eu.rudol.study.srds_main.iml" filepath="$PROJECT_DIR$/.idea/modules/eu.rudol.study.srds_main.iml" group="eu.rudol.study.srds" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/eu.rudol.study.srds_test.iml" filepath="$PROJECT_DIR$/.idea/modules/eu.rudol.study.srds_test.iml" group="eu.rudol.study.srds" />
+    </modules>
+  </component>
+</project>

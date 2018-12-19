@@ -16,12 +16,12 @@ public class CassandraModel {
                 .append("customerId int,")
                 .append("seats int,")
                 .append("timestamp bigint,")
-                .append("PRIMARY KEY (id));");
+                .append("PRIMARY KEY (trainId, id));");
 
         String query = sb.toString();
         session.execute(query);
 
-        execute("CREATE INDEX IF NOT EXISTS trainIndex ON "+tableName+" (trainId);");
+//        execute("CREATE INDEX IF NOT EXISTS trainIndex ON "+tableName+" (trainId);");
     }
 
     public ResultSet execute(String query) {;

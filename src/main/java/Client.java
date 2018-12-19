@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Client implements Runnable {
-    private static int counter = 0;
+    private static int counter = 40000;
     private int id;
     private int count;
     private Train target;

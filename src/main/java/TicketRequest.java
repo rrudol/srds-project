@@ -148,7 +148,7 @@ public class TicketRequest extends CassandraModel {
                 if (m1.timestamp == m2.timestamp) {
                     return 0;
                 }
-                return m1.timestamp > m2.timestamp ? -1 : 1;
+                return m1.timestamp < m2.timestamp ? -1 : 1;
             }
         });
 
@@ -183,7 +183,7 @@ public class TicketRequest extends CassandraModel {
                 if (m1.timestamp == m2.timestamp) {
                     return 0;
                 }
-                return m1.timestamp > m2.timestamp ? -1 : 1;
+                return m1.timestamp < m2.timestamp ? -1 : 1;
             }
         });
 
